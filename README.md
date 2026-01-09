@@ -26,9 +26,23 @@ This JavaScript script serves as a Chrome extension designed to automate the pro
 ### Mozilla Firefox
 1. Open Firefox and navigate to about:debugging#/runtime/this-firefox.
 
-2. Click on "Load Temporary Add-on" and select the manifest.json file from the project directory.
+2. Change
+   ```
+   "background": {
+      "service_worker": "background.js"
+    }
+   ```
+   To
+   ```
+   "background": {
+      "scripts": ["background.js"]
+    }
+   ```
+   in `manifest.js`
 
-3. The extension should now be added to your browser.
+4. Click on "Load Temporary Add-on" and select the manifest.json file from the project directory. 
+
+5. The extension should now be added to your browser.
 
 ## Disclaimer
 
